@@ -3,3 +3,4 @@ BlessedTides/Build/BlessedTides_Data/sharedassets0.assets.resS filter=lfs diff=l
 BlessedTides/Library/ArtifactDB filter=lfs diff=lfs merge=lfs -text
 BlessedTides/Library/PackageCache/com.unity.burst@1.8.2/.Runtime/libburst-llvm-14.dylib filter=lfs diff=lfs merge=lfs -text
 BlessedTides/Library/PlayerDataCache/Win64/Data/sharedassets0.assets.resS filter=lfs diff=lfs merge=lfs -text
+*.dylib filter=lfs diff=lfs merge=lfs -text
