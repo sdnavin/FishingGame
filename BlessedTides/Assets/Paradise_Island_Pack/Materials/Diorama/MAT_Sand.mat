@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 5
+  version: 7
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -22,6 +22,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: MAT_Sand
   m_Shader: {fileID: -6465566751694194690, guid: f46a51d38d7b0c5408b269da44b06472, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords:
   - _METALLICSPECGLOSSMAP
@@ -32,6 +34,7 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -89,10 +92,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Vector1_1C89BFB9: 0.251
-    - Vector1_276F5C94: 0.936
-    - Vector1_31638276: 0.203
-    - Vector1_AB08665E: 2.42
+    - Vector1_1C89BFB9: 1
+    - Vector1_276F5C94: 0.265
+    - Vector1_31638276: 0.075
+    - Vector1_AB08665E: 1
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
