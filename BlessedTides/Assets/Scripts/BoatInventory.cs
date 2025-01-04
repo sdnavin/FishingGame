@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class BoatInventory : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class BoatInventory : MonoBehaviour
 
     private bool isUnloading = false;        // Is the boat currently unloading?
     private float unloadTimer = 0f;          // Timer for the unloading process
-
+    public TextMeshProUGUI uGUI;
 
     private void Start()
     {
@@ -175,6 +176,7 @@ public class BoatInventory : MonoBehaviour
                 boatInventoryObjects[i].SetActive(false); // Disable object
             }
         }
+        uGUI.text = currentBoatLoad + "/" + maxBoatCapacity;
     }
 
     void UpdateSoulInventoryDisplay()

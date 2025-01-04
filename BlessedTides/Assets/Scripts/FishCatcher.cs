@@ -4,6 +4,7 @@ using UnityEngine.Audio;
 public class FishCatcher : MonoBehaviour
 {
     public GameObject boat;               // Reference to the boat object
+    public GameObject boatCatch;               // Reference to the boat object
     public float catchDistance = 5f;      // The radius within which the boat can catch fish
     public float followTime = 2f;         // Time to follow the fish before catching it
     public LineRenderer lineRenderer;     // Line renderer to visualize the catching process
@@ -19,6 +20,8 @@ public class FishCatcher : MonoBehaviour
     AudioClip[] allClips;
     [SerializeField]
     AudioSource audioSource;
+    [SerializeField]
+    CircleProgress circleProgress;
     private void Start()
     {
         lineRenderer.enabled = false; // Initially disable the line renderer
@@ -28,9 +31,14 @@ public class FishCatcher : MonoBehaviour
         {
             Debug.LogError("BoatInventory script not found on the boat!");
         }
+        circleProgress.progress=(0);
     }
     void Update()
     {
+        if(currentFish != null)
+        {
+            circleProgress.transform.position = currentFish.transform.position;
+        }
         // If the boat is currently catching a fish
         if (isCatching && currentFish != null)
         {
@@ -39,7 +47,6 @@ public class FishCatcher : MonoBehaviour
             // Animate the line from the boat to the fish
             float t = followTimer / followTime; // Normalized time
             t = Mathf.Clamp01(t);              // Ensure t is between 0 and 1
-
             // Set the positions of the line
             lineRenderer.SetPosition(0, lineRenderer.transform.position);  // Start position (boat's position)
             lineRenderer.SetPosition(1, Vector3.Lerp(fishStartPosition, lineRenderer.transform.position, t)); // Animate to boat
@@ -52,6 +59,7 @@ public class FishCatcher : MonoBehaviour
             {
                 audioSource.PlayOneShot(allClips[0]);
                 CatchFish();
+                circleProgress.progress=(0);
             }
         }
         else if (currentFish == null) // Look for fish if no catching is in progress
@@ -67,6 +75,8 @@ public class FishCatcher : MonoBehaviour
                 // Animate the line from the boat to the fish
                 float t = followTimer / followTime; // Normalized time
                 t = Mathf.Clamp01(t);              // Ensure t is between 0 and 1
+                circleProgress.progress = (t);
+
                 // Set the positions of the line
                 lineRenderer.SetPosition(0, lineRenderer.transform.position);  // Start position (boat's position)
                 lineRenderer.SetPosition(1, Vector3.Lerp(lineRenderer.transform.position, currentFish.transform.position, t)); // Animate to boat
@@ -86,7 +96,7 @@ public class FishCatcher : MonoBehaviour
     private void CheckForFishInRange()
     {
         // Find all fish within the radius around the boat
-        Collider[] fishInRange = Physics.OverlapSphere(boat.transform.position, catchDistance);
+        Collider[] fishInRange = Physics.OverlapSphere(boatCatch.transform.position, catchDistance);
 
         foreach (var fish in fishInRange)
         {
@@ -101,6 +111,7 @@ public class FishCatcher : MonoBehaviour
             }
         }
     }
+
 
     private void CatchFish()
     {
