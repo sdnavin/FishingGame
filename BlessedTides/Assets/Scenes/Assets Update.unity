@@ -3022,6 +3022,7 @@ MonoBehaviour:
   - {fileID: 316329514}
   baseInventory: {fileID: 953513905}
   soulInventory: {fileID: 953513902}
+  uGUI: {fileID: 0}
 --- !u!65 &104781635
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3056,6 +3057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boat: {fileID: 1031889354}
+  boatCatch: {fileID: 0}
   catchDistance: 5
   followTime: 1
   lineRenderer: {fileID: 788058726}
@@ -3064,6 +3066,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9192b96987f131447b5d7d1a53ced55e, type: 3}
   - {fileID: 8300000, guid: f49ef58c3d33e90408722e99526137eb, type: 3}
   audioSource: {fileID: 104781632}
+  circleProgress: {fileID: 0}
 --- !u!54 &104781637
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5426,7 +5429,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -20025,7 +20029,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -37977,6 +37982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boat: {fileID: 919132148720963908}
+  boatCatch: {fileID: 0}
   catchDistance: 5
   followTime: 1
   lineRenderer: {fileID: 531105837}
@@ -37985,6 +37991,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9192b96987f131447b5d7d1a53ced55e, type: 3}
   - {fileID: 8300000, guid: f49ef58c3d33e90408722e99526137eb, type: 3}
   audioSource: {fileID: 1008837021}
+  circleProgress: {fileID: 0}
 --- !u!65 &1008837011
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38040,6 +38047,7 @@ MonoBehaviour:
   - {fileID: 1026918832}
   baseInventory: {fileID: 1419593579}
   soulInventory: {fileID: 1419593580}
+  uGUI: {fileID: 0}
 --- !u!114 &1008837020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43822,7 +43830,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -67296,7 +67305,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -70504,6 +70514,7 @@ MonoBehaviour:
   - {fileID: 1530861220}
   baseInventory: {fileID: 127787655}
   soulInventory: {fileID: 127787652}
+  uGUI: {fileID: 0}
 --- !u!65 &2048188537
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70538,6 +70549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boat: {fileID: 542192220}
+  boatCatch: {fileID: 0}
   catchDistance: 5
   followTime: 1
   lineRenderer: {fileID: 1183736815}
@@ -70546,6 +70558,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9192b96987f131447b5d7d1a53ced55e, type: 3}
   - {fileID: 8300000, guid: f49ef58c3d33e90408722e99526137eb, type: 3}
   audioSource: {fileID: 2048188534}
+  circleProgress: {fileID: 0}
 --- !u!54 &2048188539
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -71499,6 +71512,7 @@ MonoBehaviour:
   - {fileID: 1391900292}
   baseInventory: {fileID: 1334507340}
   soulInventory: {fileID: 1334507337}
+  uGUI: {fileID: 0}
 --- !u!65 &2073785148
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71533,6 +71547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boat: {fileID: 1893517662}
+  boatCatch: {fileID: 0}
   catchDistance: 5
   followTime: 1
   lineRenderer: {fileID: 1585547442}
@@ -71541,6 +71556,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9192b96987f131447b5d7d1a53ced55e, type: 3}
   - {fileID: 8300000, guid: f49ef58c3d33e90408722e99526137eb, type: 3}
   audioSource: {fileID: 2073785145}
+  circleProgress: {fileID: 0}
 --- !u!54 &2073785150
 Rigidbody:
   m_ObjectHideFlags: 0

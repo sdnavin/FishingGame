@@ -24,16 +24,17 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4931685950175571539}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.964, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4931685950825573636}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!120 &4931685950175571541
 LineRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -121,16 +122,20 @@ LineRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
+      m_ColorSpace: -1
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
     textureMode: 0
+    textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
+  m_MaskInteraction: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+  m_ApplyActiveColorSpace: 0
 --- !u!1 &4931685950653089782
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,6 +162,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4931685950653089782}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 44.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -164,7 +170,6 @@ Transform:
   m_Children:
   - {fileID: 4898341083217349914}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4931685950653089768
 MonoBehaviour:
@@ -182,6 +187,8 @@ MonoBehaviour:
   turnSpeed: 180
   swayAmount: 2
   swaySpeed: 2
+  slotID: 0
+  slotoffset: 1
 --- !u!54 &4931685950653089769
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -189,10 +196,21 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4931685950653089782}
-  serializedVersion: 2
+  serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 1
@@ -211,9 +229,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boat: {fileID: 5238170081542739872}
+  boatCatch: {fileID: 0}
   catchDistance: 5
   followTime: 2
   lineRenderer: {fileID: 4931685950175571541}
+  fishWeight: 5
+  allClips: []
+  audioSource: {fileID: 0}
+  circleProgress: {fileID: 0}
 --- !u!1 &4931685950825573635
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,6 +263,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4931685950825573635}
+  serializedVersion: 2
   m_LocalRotation: {x: 0.30005264, y: -0.64028776, z: 0.30005264, w: 0.64028776}
   m_LocalPosition: {x: -2.038, y: 0.418, z: -0}
   m_LocalScale: {x: 0.058823522, y: 0.5882352, z: 0.058823526}
@@ -247,7 +271,6 @@ Transform:
   m_Children:
   - {fileID: 4931685950175571540}
   m_Father: {fileID: 4898341083217349914}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50.218, y: 0, z: 0}
 --- !u!33 &4931685950825573639
 MeshFilter:
@@ -277,7 +300,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -307,8 +330,17 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4931685950825573635}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
+  serializedVersion: 2
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
@@ -318,6 +350,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4931685950653089783}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b5468b322f2f4904dbe0f14cf8294e67, type: 3}
@@ -381,6 +414,12 @@ PrefabInstance:
       value: Boat01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: b5468b322f2f4904dbe0f14cf8294e67, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4931685950825573636}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5468b322f2f4904dbe0f14cf8294e67, type: 3}
 --- !u!4 &4898341083217349914 stripped
 Transform:
