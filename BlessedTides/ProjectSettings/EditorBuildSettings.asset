@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/multiplayer.unity
     guid: 564b47e242db5104ebb5411a1fec0f2b
+  - enabled: 1
+    path: Assets/GreenTree/ShipsAndPirates/Scenes/Demo_Environment.unity
+    guid: eefdc1e0731179e4b98c617b67ed2d72
   m_configObjects: {}
