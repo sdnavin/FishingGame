@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/GreenTree/ShipsAndPirates/Scenes/Demo_Environment.unity
+- path: Assets/Scenes/Assets Update.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

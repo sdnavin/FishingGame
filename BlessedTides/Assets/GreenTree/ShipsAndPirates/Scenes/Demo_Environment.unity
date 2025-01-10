@@ -715,6 +715,7 @@ GameObject:
   m_Component:
   - component: {fileID: 195340678}
   - component: {fileID: 195340677}
+  - component: {fileID: 195340679}
   m_Layer: 0
   m_Name: Directional Light White
   m_TagString: Untagged
@@ -799,6 +800,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 55, y: -49.166, z: 70}
+--- !u!114 &195340679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195340676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1001 &198658150
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3234,6 +3258,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ferring
       objectReference: {fileID: 0}
+    - target: {fileID: 6292350693847149042, guid: ab33156b493b0f64b938c34812f8b917, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6636400615033500488, guid: ab33156b493b0f64b938c34812f8b917, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -3702,7 +3730,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 460051394271352424, guid: dd66e4e70a757a54caea30ff4e96c862, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 460051394271352424, guid: dd66e4e70a757a54caea30ff4e96c862, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4600,6 +4628,7 @@ GameObject:
   - component: {fileID: 821251746}
   - component: {fileID: 821251745}
   - component: {fileID: 821251748}
+  - component: {fileID: 821251749}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -4673,14 +4702,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 821251744}
-  m_LocalRotation: {x: 0.28111136, y: -0.3645385, z: 0.11644013, w: 0.8800738}
-  m_LocalPosition: {x: 74.4, y: 72.5, z: -84.3}
+  m_LocalRotation: {x: 0.54281914, y: -0.22849785, z: 0.057229206, w: 0.80613947}
+  m_LocalPosition: {x: -3.4, y: 25.5, z: 6.1}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 35.429, y: -45, z: 0}
+  m_LocalEulerAnglesHint: {x: 64.333, y: -45, z: -21.082}
 --- !u!114 &821251748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4694,6 +4723,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   depthTextureMode: 1
+--- !u!114 &821251749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821251744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1001 &830240989
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4927,6 +5000,10 @@ PrefabInstance:
     - target: {fileID: 177638, guid: 0abab5bb77339e4428787a870eb31bd3, type: 3}
       propertyPath: m_Name
       value: '[Graphy]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 177638, guid: 0abab5bb77339e4428787a870eb31bd3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22451668, guid: 0abab5bb77339e4428787a870eb31bd3, type: 3}
       propertyPath: m_Pivot.x
@@ -7986,6 +8063,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1453494326}
   - component: {fileID: 1453494325}
+  - component: {fileID: 1453494327}
   m_Layer: 0
   m_Name: Directional Light Blue
   m_TagString: Untagged
@@ -8070,6 +8148,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -3.028, y: -210.899, z: -0.471}
+--- !u!114 &1453494327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453494324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1001 &1461606741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12306,6 +12407,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tartana
       objectReference: {fileID: 0}
+    - target: {fileID: 7620068425022409881, guid: a265a756c1e82244ab868cb6b63c9e99, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12327,6 +12432,10 @@ PrefabInstance:
     - target: {fileID: 5863193327993484268, guid: 1a3ce09f5bf92e94da8248c4a9351932, type: 3}
       propertyPath: m_Name
       value: Admiral
+      objectReference: {fileID: 0}
+    - target: {fileID: 5863193327993484268, guid: 1a3ce09f5bf92e94da8248c4a9351932, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6491358221776562518, guid: 1a3ce09f5bf92e94da8248c4a9351932, type: 3}
       propertyPath: m_RootOrder
@@ -12594,6 +12703,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Schooner
       objectReference: {fileID: 0}
+    - target: {fileID: 5389328857034097720, guid: 88d96fb0412797043b4f1498c6575a15, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12794,6 +12907,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Caravel
       objectReference: {fileID: 0}
+    - target: {fileID: 825916767976673216, guid: 43412cd8eee58bb4a86f63d8b3eeb460, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12899,6 +13016,10 @@ PrefabInstance:
     - target: {fileID: 6094261082359960978, guid: adc4e5138c3818141921ba56f0ad251a, type: 3}
       propertyPath: m_Name
       value: Frigate
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094261082359960978, guid: adc4e5138c3818141921ba56f0ad251a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6906545486237126440, guid: adc4e5138c3818141921ba56f0ad251a, type: 3}
       propertyPath: m_RootOrder
@@ -13025,7 +13146,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2654257147322034480, guid: 890e388e5ec4898498282f8b6f5c637a, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2654257147322034480, guid: 890e388e5ec4898498282f8b6f5c637a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13070,6 +13191,10 @@ PrefabInstance:
     - target: {fileID: 3431180501130130314, guid: 890e388e5ec4898498282f8b6f5c637a, type: 3}
       propertyPath: m_Name
       value: Boat
+      objectReference: {fileID: 0}
+    - target: {fileID: 3431180501130130314, guid: 890e388e5ec4898498282f8b6f5c637a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13203,6 +13328,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Galleon
       objectReference: {fileID: 0}
+    - target: {fileID: 692991985268217724, guid: 95f4c0872a4d9e64e8d27e90f66145f8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13281,6 +13410,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Brigantine
       objectReference: {fileID: 0}
+    - target: {fileID: 8478558865607562523, guid: 1d710479d23d0ee45a7c835e2def4305, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9142928405178044321, guid: 1d710479d23d0ee45a7c835e2def4305, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -13351,6 +13484,10 @@ PrefabInstance:
     - target: {fileID: 7458999476041500648, guid: 94ae957b413971f4a8fe2c396a74018b, type: 3}
       propertyPath: m_Name
       value: Sloop
+      objectReference: {fileID: 0}
+    - target: {fileID: 7458999476041500648, guid: 94ae957b413971f4a8fe2c396a74018b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7838620900511915346, guid: 94ae957b413971f4a8fe2c396a74018b, type: 3}
       propertyPath: m_RootOrder
@@ -13485,6 +13622,10 @@ PrefabInstance:
     - target: {fileID: 7111218185842891856, guid: 7676b73999341f243a42bbbbb7c49e74, type: 3}
       propertyPath: m_Name
       value: Drakkar
+      objectReference: {fileID: 0}
+    - target: {fileID: 7111218185842891856, guid: 7676b73999341f243a42bbbbb7c49e74, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7636926221859079914, guid: 7676b73999341f243a42bbbbb7c49e74, type: 3}
       propertyPath: m_RootOrder
