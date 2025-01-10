@@ -26,19 +26,19 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1423532895168835702}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5000001, y: 1.5, z: 1.5000001}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6116826256752610389}
   - {fileID: 8661894434437312960}
   - {fileID: 5591221755553721375}
   - {fileID: 8656108088521863635}
   - {fileID: 7976345197594497273}
   - {fileID: 2521800833210146945}
+  - {fileID: 6116826256752610389}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3397240902100477289
 MeshFilter:
@@ -137,13 +137,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7710076421853161307}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.00000011920929, y: 0.772, z: 0.00000011920929}
+  m_LocalPosition: {x: 0, y: 0.772, z: 0}
   m_LocalScale: {x: 0.6, y: 0.02, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1768427068618402508}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7917460274888318003
 MeshFilter:
@@ -230,6 +230,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fish05
       objectReference: {fileID: 0}
+    - target: {fileID: 1910826852619858, guid: bf0df99db0e69374787db1930f12d96c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4027539552804254, guid: bf0df99db0e69374787db1930f12d96c, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -307,6 +311,10 @@ PrefabInstance:
     - target: {fileID: 1754134652064946, guid: 8904be5d4678137488ffd85162cd05e3, type: 3}
       propertyPath: m_Name
       value: Fish02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1754134652064946, guid: 8904be5d4678137488ffd85162cd05e3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4656315685357460, guid: 8904be5d4678137488ffd85162cd05e3, type: 3}
       propertyPath: m_RootOrder
@@ -386,6 +394,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fish04
       objectReference: {fileID: 0}
+    - target: {fileID: 1550159378009330, guid: bd93fd9b59f7ebc40abae1eadaea9168, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4497034190061294, guid: bd93fd9b59f7ebc40abae1eadaea9168, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -464,6 +476,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fish01
       objectReference: {fileID: 0}
+    - target: {fileID: 1502900601577816, guid: 428bbdf30777be043a92558682b7757a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4590658642912836, guid: 428bbdf30777be043a92558682b7757a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -541,6 +557,10 @@ PrefabInstance:
     - target: {fileID: 1045811944559828, guid: bab1287a00165c34eb228a8dc61d3469, type: 3}
       propertyPath: m_Name
       value: Fish03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045811944559828, guid: bab1287a00165c34eb228a8dc61d3469, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4406541389744724, guid: bab1287a00165c34eb228a8dc61d3469, type: 3}
       propertyPath: m_RootOrder

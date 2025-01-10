@@ -22,6 +22,8 @@ public class FishCatcher : MonoBehaviour
     AudioSource audioSource;
     [SerializeField]
     CircleProgress circleProgress;
+    [SerializeField]
+    Animator fishingrod;
     private void Start()
     {
         lineRenderer.enabled = false; // Initially disable the line renderer
@@ -84,6 +86,7 @@ public class FishCatcher : MonoBehaviour
                 {
                    
                     isCatching = true;
+                    fishingrod.SetTrigger("catch");
                     currentFish.GetComponent<FishFlock>().enabled = false;
                     followTimer = 0;
                     fishStartPosition = currentFish.transform.position; // Save initial fish position
