@@ -1,6 +1,6 @@
 using UnityEngine;
 using System;
-
+using TMPro;
 public class BaseInventory : MonoBehaviour
 {
     public int maxBaseCapacity = 50;         // Maximum capacity of the base
@@ -8,7 +8,7 @@ public class BaseInventory : MonoBehaviour
     public GameObject[] baseInventoryObjects; // Visual objects in the base (10 objects, each with 5 children)
 
     public event Action<GameObject> OnBaseFullyLoaded; // Event triggered when a base object is fully loaded
-
+    public TextMeshProUGUI invventoryUI;
     private void Start()
     {
         // Disable all parent and child objects initially
@@ -23,7 +23,10 @@ public class BaseInventory : MonoBehaviour
             }
         }
     }
-
+    public void updateUI()
+    {
+        invventoryUI.text = currentBaseLoad + "/" + maxBaseCapacity;
+    }
     // Add resources to the base
     public bool AddToBase(int amount)
     {
@@ -81,6 +84,7 @@ public class BaseInventory : MonoBehaviour
                 OnBaseFullyLoaded?.Invoke(baseInventoryObjects[i]);
             }
         }
+        updateUI();
     }
 
     // Check if all children of a base object are active

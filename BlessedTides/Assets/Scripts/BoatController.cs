@@ -68,7 +68,7 @@ public class BoatController : MonoBehaviour
         //    return;
         //}
         if (WebSocketClient.dataIn != null)
-            joystickInput = Vector2.Lerp(joystickInput, new Vector2((float)WebSocketClient.dataIn[slotID].data.x, (float)WebSocketClient.dataIn[slotID].data.y* slotoffset),speed*Time.deltaTime);
+            joystickInput = Vector2.Lerp(joystickInput, new Vector2((float)WebSocketClient.dataIn[slotID].data.x * slotoffset, (float)WebSocketClient.dataIn[slotID].data.y* slotoffset),speed*Time.deltaTime);
         else
         {
             joystickInput = Vector2.zero;

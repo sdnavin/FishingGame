@@ -84,7 +84,8 @@ public class FishCatcher : MonoBehaviour
                 lineRenderer.SetPosition(1, Vector3.Lerp(lineRenderer.transform.position, currentFish.transform.position, t)); // Animate to boat
                 if (t >= 1f)
                 {
-                   
+                    circleProgress.progress = (0);
+
                     isCatching = true;
                     fishingrod.SetTrigger("catch");
                     currentFish.GetComponent<FishFlock>().enabled = false;
@@ -98,6 +99,8 @@ public class FishCatcher : MonoBehaviour
 
     private void CheckForFishInRange()
     {
+        if (boatInventory.isFull)
+            return;
         // Find all fish within the radius around the boat
         Collider[] fishInRange = Physics.OverlapSphere(boatCatch.transform.position, catchDistance);
 

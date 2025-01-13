@@ -1,5 +1,5 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class BoatInventory : MonoBehaviour
 {
@@ -21,6 +21,8 @@ public class BoatInventory : MonoBehaviour
     private float unloadTimer = 0f;          // Timer for the unloading process
     public TextMeshProUGUI uGUI;
 
+    public bool isFull=false;
+    public GameObject FullObj;
     private void Start()
     {
         // Initially disable all boat inventory objects
@@ -34,7 +36,11 @@ public class BoatInventory : MonoBehaviour
             soulInventoryObjects[i].SetActive(false);
         }
     }
-
+    public void SetInventoryStatus(bool status)
+    {
+        FullObj.SetActive(status);
+        isFull = status;
+    }
     // Add resources to the boat
     public bool AddToBoat(int amount)
     {
@@ -43,10 +49,19 @@ public class BoatInventory : MonoBehaviour
             currentBoatLoad += amount;
             Debug.Log($"Added {amount} resources to the boat. Current load: {currentBoatLoad}/{maxBoatCapacity}");
             UpdateBoatInventoryDisplay(); // Update boat inventory visuals
+            if (currentBoatLoad >= maxBoatCapacity)
+            {
+                SetInventoryStatus(true);
+            }
+            else
+            {
+                SetInventoryStatus(false);
+            }
             return true; // Successfully added
         }
         else
         {
+            SetInventoryStatus(true);
             Debug.Log("Boat is full! Cannot add more resources.");
             return false; // Failed to add
         }
@@ -156,6 +171,7 @@ public class BoatInventory : MonoBehaviour
             {
                 isUnloading = false; // Stop unloading when the boat is empty
                 Debug.Log("Unloading complete.");
+                SetInventoryStatus(false);
             }
         }
     }
